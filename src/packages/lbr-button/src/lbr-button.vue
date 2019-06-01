@@ -1,5 +1,5 @@
 <template>
-    <button class="btn">{{title}}</button>
+    <button class="btn" v-tap="{methods:ss}">{{title}}</button>
 </template>
 <script>
     export default {
@@ -14,6 +14,11 @@
                 type: String,
                 default: "按钮"
             },
+        },
+        methods:{
+            ss(){
+                console.log("11")
+            }
         }
     }
 </script>

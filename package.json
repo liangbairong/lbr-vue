@@ -1,6 +1,6 @@
 {
   "name": "lbr-vue-ui",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "基于 Vue ui 功能组件",
   "main": "lib/lbr-vue-ui.common.js",
   "author":"feel",
