@@ -7,9 +7,14 @@ import 'lib-flexible'
 Vue.config.productionTip = false
 
 // 导入组件库
-import lbr,{vTap} from '@/packages/index'
+import lbr, { vTap } from '@/packages/index'
+// import lbr from '@/packages/index'
 // 注册组件库
+Vue.use(lbr)
 Vue.use(vTap)
+
+import vMessage from '@/packages/lbr-message'
+Vue.use(vMessage)
 new Vue({
   router,
   render: h => h(App)

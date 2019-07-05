@@ -11,11 +11,7 @@ export default {
   name: "home",
   created() {
     console.log("home");
-    this.$toast({
-      message: "提示",
-      position: "bottom",
-      duration: 5000
-    });
+    this.$message.info("普通消息");
   }
 };
 </script>
