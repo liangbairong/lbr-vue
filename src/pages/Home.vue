@@ -18,7 +18,9 @@ export default {
   methods:{
     message(){
    
-      this.$lbrMessage.info("普通消息");
+      this.$lbrMessage({title:"普通消息"}).then(()=>{
+        console.log("Sdd")
+      });
     }
   }
 };

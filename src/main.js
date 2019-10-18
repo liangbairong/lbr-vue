@@ -11,9 +11,6 @@ import lbr, { vTap } from '@/packages/index'
 // 注册组件库
 Vue.use(lbr)
 Vue.use(vTap)
-
-// import vMessage from '@/packages/lbr-message'
-// Vue.use(vMessage)
 new Vue({
   router,
   render: h => h(App)

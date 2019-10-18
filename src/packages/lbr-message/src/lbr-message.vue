@@ -46,15 +46,15 @@ export default {
   transform: translateX(-50%) translateY(-50%);
   min-width: 400px;
   padding: 10px 20px;
-  color: #000;
-  background: #f5f5f5;
   font-size: 36px;
   line-height: 1.4;
   border-radius: 10px;
   z-index: 1000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
   &.info {
-    background: #fff;
+   
   }
   &.success {
 

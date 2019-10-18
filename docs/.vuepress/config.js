@@ -1,7 +1,6 @@
 module.exports = {
-  title: 'Adroi媒体API 接口文档',  // 设置网站标题
+  title: 'lbr-vue-ui文档',  // 设置网站标题
   description : 'Adroi',
-  // base : '/v1/adroi-h5/adroiapi/',
   themeConfig : {
     nav : [
         { text: '接口定义', link: '/apiword' },
@@ -10,11 +9,17 @@ module.exports = {
     ],
     sidebar: { 
         '/' : [
-          '/index',
           {
-            title: '侧边栏下拉框的标题1',
+            title: '前言',
             children: [
-              '/apiword',
+              '/lbr-message',
+              '/aaa'
+            ]
+          },
+          {
+            title: '组件',
+            children: [
+              '/lbr-message',
               '/aaa'
             ]
           },

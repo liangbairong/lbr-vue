@@ -1,10 +1,8 @@
 
 import '@/assets/css/public.scss'
 import vTap from './v-tap/v-tap'
-// 导入颜色选择器组件
 import lbrButton from './lbr-button'
 import lbrLoadMove from './lbr-load-move'
-
 import lbrMessage from './lbr-message'
 // 存储组件列表
 const components = [
@@ -19,25 +17,24 @@ const install = function (Vue) {
 
 
   messageOffer(Vue);
- 
+
 }
 // 
-function messageOffer(Vue){
-  function msg(type, text, callBack) {
-    let msg
-    let duration = 3000
-    if (typeof text === 'string') {
-      msg = text
-    } else if (text instanceof Object) {
-      msg = text.text || ''
-      if (text.duration) {
-        duration = text.duration
+function messageOffer(Vue) {
+  function msg(param, callBack) {
+    let msg;
+    let duration = param.duration || 3000;
+    if (typeof param.title === 'string') {
+      msg = param.title
+    } else if (param.title instanceof Object) {
+      msg = param.title || ''
+      if (param.duration) {
+        duration = param.duration
       }
     }
     let VueMessage = Vue.extend({
       render(h) {
         let props = {
-          type,
           text: msg,
           show: this.show
         }
@@ -76,24 +73,33 @@ function messageOffer(Vue){
     }, duration)
   }
   // 挂载到vue原型上，暴露四个方法
-  Vue.prototype.$lbrMessage = {
-    info(text, callBack) {
-      if (!text) return
-      msg('info', text, callBack)
-    },
-    success(text, callBack) {
-      if (!text) return
-      msg('success', text, callBack)
-    },
-    error(text, callBack) {
-      if (!text) return
-      msg('error', text, callBack)
-    },
-    warning(text, callBack) {
-      if (!text) return
-      msg('warning', text, callBack)
-    }
+  Vue.prototype.$lbrMessage = (param) => {
+    return new Promise((succ) => {
+      if (!param.title) return
+      msg(param, () => {
+        succ();
+      })
+    })
   }
+
+  // = {
+  //   info(text, callBack) {
+  //     if (!text) return
+  //     msg('info', text, callBack)
+  //   },
+  //   success(text, callBack) {
+  //     if (!text) return
+  //     msg('success', text, callBack)
+  //   },
+  //   error(text, callBack) {
+  //     if (!text) return
+  //     msg('error', text, callBack)
+  //   },
+  //   warning(text, callBack) {
+  //     if (!text) return
+  //     msg('warning', text, callBack)
+  //   }
+  // }
 }
 
 
