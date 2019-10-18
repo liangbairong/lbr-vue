@@ -14,8 +14,6 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "qs": "^6.6.0",
     "vonic": "^2.0.0-beta.10",
     "vue": "^2.6.6",
     "vue-router": "^3.0.1",
