@@ -1,5 +1,5 @@
 <template>
-    <button class="btn" v-tap="{methods:ss}">{{title}}</button>
+    <button class="btn"  >{{title}}</button>
 </template>
 <script>
     export default {
@@ -16,19 +16,17 @@
             },
         },
         methods:{
-            ss(){
-                console.log("11")
-            }
+
         }
     }
 </script>
 
 <style lang="scss" scoped>
 .btn{
-    background: #fff;
-    border: 1PX solid #eee;
-    padding: 10px 20px;
-    font-size: 20px;
-    border-radius: 10px;
+  background: #fff;
+  border: 1PX solid #eee;
+  padding: 20px 40px;
+  font-size: 30px;
+  border-radius: 10px;
 }
 </style>

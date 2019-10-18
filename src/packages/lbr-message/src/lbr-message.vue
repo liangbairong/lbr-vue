@@ -40,22 +40,24 @@ export default {
 }
 .message {
   position: fixed;
-  top: 40px;
+  top: 50%;
   text-align: center;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(-50%);
   min-width: 400px;
   padding: 10px 20px;
-  color: #ccc;
+  color: #000;
   background: #f5f5f5;
-  font-size: 14px;
+  font-size: 36px;
   line-height: 1.4;
-  border-radius: 4px;
+  border-radius: 10px;
   z-index: 1000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   &.info {
+    background: #fff;
   }
   &.success {
+
   }
   &.error {
   }

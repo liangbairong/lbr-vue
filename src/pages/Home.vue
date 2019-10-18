@@ -1,17 +1,25 @@
 <template>
   <div class="home">
-    <lbr-load-move>
+    <!-- <lbr-load-move>
       <lbr-button class="red">fd</lbr-button>
-    </lbr-load-move>
+    </lbr-load-move> -->
+     <button class="red" @click="message">fd</button>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "home",
   created() {
     console.log("home");
-    this.$message.info("普通消息");
+    
+  },
+  methods:{
+    message(){
+   
+      this.$lbrMessage.info("普通消息");
+    }
   }
 };
 </script>

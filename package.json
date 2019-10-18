@@ -3,13 +3,15 @@
   "version": "0.0.6",
   "description": "基于 Vue ui 功能组件",
   "main": "lib/lbr-vue-ui.common.js",
-  "author":"feel",
+  "author": "feel",
   "keyword": "lbr-vue-ui",
   "private": false,
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib --name lbr-vue-ui --dest lib ./src/packages/index.js"
+    "lib": "vue-cli-service build --target lib --name lbr-vue-ui --dest lib ./src/packages/index.js",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -20,16 +22,17 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "lib-flexible": "^0.3.2",
-    "postcss-px2rem": "^0.3.0",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
+    "lib-flexible": "^0.3.2",
     "node-sass": "^4.9.0",
+    "postcss-px2rem": "^0.3.0",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.5.21"
+    "vue-template-compiler": "^2.5.21",
+    "vuepress": "^1.2.0"
   }
 }
