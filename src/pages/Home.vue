@@ -17,10 +17,14 @@ export default {
   },
   methods:{
     message(){
-   
-      this.$lbrMessage({title:"普通消息"}).then(()=>{
-        console.log("Sdd")
-      });
+      
+      window.$lbrLoading.show();
+      setTimeout(()=>{
+        window.$lbrLoading.hide();
+      },1000)
+      // this.$lbrMessage({title:"普通消息"}).then(()=>{
+      //   console.log("Sdd")
+      // });
     }
   }
 };
