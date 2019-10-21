@@ -2,11 +2,12 @@
 title: 'lbr-message'
 ---
 # 消息提示
+该组件只能全局引用
 
-调用方法
+## 调用方法
 ```js
 this.$lbrMessage({title:"普通消息"}).then(()=>{
-  console.log("Sdd")
+  console.log("提示消失回调")
 });
 ```
 
@@ -15,3 +16,4 @@ this.$lbrMessage({title:"普通消息"}).then(()=>{
 | -------- | ------ | ------ | -------- |
 | title    | string |        | 提示内容 |
 | duration | number | 3000ms | 显示时间 |
+

@@ -1,17 +1,25 @@
 
 import '@/assets/css/public.scss'
+import Vue from 'vue'
+import VueScroller from 'vue-scroller'
+Vue.use(VueScroller)
+import './resetInput'
 import {createElement, timeout} from './utils'
 import vTap from './v-tap/v-tap'
 import LbrButton from './lbr-button'
-import LbrLoadMove from './lbr-load-move'
+import LbrSrcoll from './lbr-load-moves'
 import LbrMessage from './lbr-message'
 import LbrLoading from './lbr-loading'
+import lbrDatepicker from './lbr-datepicker'
+
+
 // 存储组件列表
 const components = [
   LbrButton,
-  LbrLoadMove,
+  LbrSrcoll,
   LbrMessage,
-  LbrLoading
+  LbrLoading,
+  lbrDatepicker
 ]
 
 const install = function (Vue) {
@@ -105,7 +113,7 @@ function loadingOffer(Vue){
       }
   
       createElement('von-loading')
-      vm = new Vue(Loading).$mount('[von-loading]')
+      vm = new Vue(LbrLoading).$mount('[von-loading]')
       vm.show({
         tips: tips
       })
@@ -162,11 +170,12 @@ function loadingOffer(Vue){
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
-export { vTap, LbrButton, LbrLoadMove }
+export { vTap, LbrButton, LbrSrcoll,lbrDatepicker }
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
   install,
   // 以下是具体的组件列表
   LbrButton,
-  LbrLoadMove,
+  LbrSrcoll,
+  lbrDatepicker
 }

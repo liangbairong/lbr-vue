@@ -1,5 +1,5 @@
 <template>
-    <button class="btn"  >{{title}}</button>
+    <button class="button" @click="click"><slot/></button>
 </template>
 <script>
     export default {
@@ -16,17 +16,29 @@
             },
         },
         methods:{
-
+          click(){
+            this.$emit('click')
+          }
         }
     }
 </script>
 
 <style lang="scss" scoped>
-.btn{
-  background: #fff;
-  border: 1PX solid #eee;
-  padding: 20px 40px;
-  font-size: 30px;
-  border-radius: 10px;
+.button {
+  border-radius: 50px;
+  text-shadow: 0px 1PX 0px #2f6627;
+  font-family: Arial;
+  color: #ffffff;
+  font-size:34px;
+  background: #44c767;
+  padding: 20px 50px 20px 50px;
+  border: solid #18ab29 1PX;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: #ffffff;
+  background: #5cbf2a;
+  text-decoration: none;
 }
 </style>

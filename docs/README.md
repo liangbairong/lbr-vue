@@ -1,9 +1,4 @@
 ---
-title: 'Basic 基础'
+title: 'lbr-vue-ui'
 ---
 
-xcxcs
-
-sd
-s
-d
