@@ -11,6 +11,7 @@ cnpm i lbr-vue-ui
 ```js
 // 导入组件库
 import lbr from 'lbr-vue-ui'
+import 'lbr-vue-ui/lib/lbr-vue-ui.css'
 // 注册组件库
 Vue.use(lbr)
 ```
