@@ -7,10 +7,10 @@ import 'lib-flexible'
 Vue.config.productionTip = false
 
 // 导入组件库
-import lbr, { vTap } from '@/packages/index'
+import lbr from '@/packages/index'
+// import lbr from '@/lib/lbr-vue-ui.umd.min.js'
 // 注册组件库
 Vue.use(lbr)
-Vue.use(vTap)
 new Vue({
   router,
   render: h => h(App)

@@ -7,7 +7,7 @@
   </transition>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
 export default {
   name: "lbr-message",
   props: {
@@ -15,7 +15,6 @@ export default {
       type: String,
       default: "info",
       validator: val => ["info", "success", "warning", "error"].includes(val)
-      //['info', 'success', 'warning', 'error'] 表示type只接收这四个字符串作为参数传入message组件
     },
     text: {
       type: String,

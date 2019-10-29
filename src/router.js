@@ -3,10 +3,11 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const Home = r => require.ensure([], () => r(require('@/pages/Home')), 'modle_1')
-const About = r => require.ensure([], () => r(require('@/pages/About')), 'modle_1')
+const Button = r => require.ensure([], () => r(require('@/pages/Button')), 'modle_1')
+const Srcoll = r => require.ensure([], () => r(require('@/pages/Srcoll')), 'modle_1')
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  // mode: 'history',
+  // base: process.env.BASE_URL,
   routes: [{
       path: '/',
       name: 'home',
@@ -17,12 +18,21 @@ export default new Router({
       }
     },
     {
-      path: '/about',
-      name: 'about',
-      component: About,
+      path: '/button',
+      name: 'button',
+      component: Button,
       meta: {
         rank: 2,
-        title: '关于我们'
+        title: '按钮组件'
+      }
+    },
+    {
+      path: '/srcoll',
+      name: 'srcoll',
+      component: Srcoll,
+      meta: {
+        rank: 2,
+        title: '下拉刷新'
       }
     }
   ],

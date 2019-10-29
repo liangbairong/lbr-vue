@@ -11,5 +11,5 @@ module.exports = {
             }
         }
     },
-    productionSourceMap: false, // 是否生产map文件
+    productionSourceMap: true, // 是否生产map文件
 }
