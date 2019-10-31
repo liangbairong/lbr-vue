@@ -30,4 +30,4 @@ export default {
 };
 ```
 # 注意事项
-改组件库样式基于px2rem，需在项目配置pex2rem。
+该组件库样式基于px2rem，需在项目配置pex2rem。

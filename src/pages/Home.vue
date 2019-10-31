@@ -2,86 +2,96 @@
   <div class="home">
     <ul class="list">
       <li v-for="(item,index) in list" :key="index">
-        <router-link :to="item.url">
-          {{item.text}}
-        </router-link>
+        <router-link :to="item.url">{{item.text}}</router-link>
       </li>
     </ul>
+
+    <!-- <mt-picker :slots="slots" @change="onValuesChange"></mt-picker> -->
   </div>
 </template>
 
 <script>
-import { LbrMessage } from '@/packages/index'
 export default {
   name: "home",
   data() {
     return {
-      list:[
+      slots: [
         {
-          text:'Button',
-          url:'button'
+          flex: 1,
+          values: [
+            "2015-01",
+            "2015-02",
+            "2015-03",
+            "2015-04",
+            "2015-05",
+            "2015-06"
+          ],
+          className: "slot1",
+          textAlign: "right"
         },
         {
-          text:'Srcoll',
-          url:'srcoll'
-        },{
-          text:'Button',
-          url:'button'
+          divider: true,
+          content: "-",
+          className: "slot2"
         },
         {
-          text:'Button',
-          url:'button'
-        },
-        {
-          text:'Button',
-          url:'button'
+          flex: 1,
+          values: [
+            "2015-01",
+            "2015-02",
+            "2015-03",
+            "2015-04",
+            "2015-05",
+            "2015-06"
+          ],
+          className: "slot3",
+          textAlign: "left"
         }
       ],
-      birthday: "2016-12-01"
+      list: [
+        {
+          text: "Button",
+          url: "button"
+        },
+        {
+          text: "Srcoll",
+          url: "srcoll"
+        },
+        {
+          text: "Swipe",
+          url: "swipe"
+        },
+        {
+          text: "Pop",
+          url: "pop"
+        },
+        {
+          text: "Button",
+          url: "button"
+        }
+      ]
     };
   },
-  created() {
-    console.log("home");
-  },
-  methods: {
-    message(a) {
-      console.log(a)
-      // this.$toast({ message: '提示',})
-      LbrMessage({title:'sss'})
-      // this.$lbrLoading.show();
-      // setTimeout(() => {
-      //   this.$lbrLoading.hide();
-      // }, 1000);
-      // this.$lbrMessage({title:"普通消息"}).then(()=>{
-      //   console.log("Sdd")
-      // });
-    },
-    refresh(callback) {
-      setTimeout(() => {
-        callback();
-      }, 1000);
-    }
-  }
+  created() {}
 };
 </script>
 <style lang="scss" scoped>
-.list{
-  display: flex;
-  text-align: center;
+.list {
+  // display: flex;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  background: #fff;
+  font-size: 34px;
 
-   flex-wrap:wrap;
-   border-top: 1PX solid #ccc;
-   border-left: 1PX solid #ccc;
-   font-size: 40px;
-  li{
-    border: 1PX solid #ccc;
-    border-left: none;
-    border-top: none;
-    height: 200px;
-    line-height: 200px;
-    width:33.33%;
+  li {
+    border-bottom: 1px solid #eee;
+
+    height: 100px;
+    line-height: 100px;
+
     box-sizing: border-box;
-    a{
+
+    a {
       display: block;
     }
   }

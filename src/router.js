@@ -5,6 +5,8 @@ Vue.use(Router)
 const Home = r => require.ensure([], () => r(require('@/pages/Home')), 'modle_1')
 const Button = r => require.ensure([], () => r(require('@/pages/Button')), 'modle_1')
 const Srcoll = r => require.ensure([], () => r(require('@/pages/Srcoll')), 'modle_1')
+const Swipe = r => require.ensure([], () => r(require('@/pages/Swipe')), 'modle_1')
+const Pop = r => require.ensure([], () => r(require('@/pages/Pop')), 'modle_1')
 export default new Router({
   // mode: 'history',
   // base: process.env.BASE_URL,
@@ -34,6 +36,24 @@ export default new Router({
         rank: 2,
         title: '下拉刷新'
       }
+    },
+    {
+      path: '/swipe',
+      name: 'swipe',
+      component: Swipe,
+      meta: {
+        rank: 2,
+        title: '轮播图'
+      }
+    },
+    {
+      path: '/pop',
+      name: 'pop',
+      component: Pop,
+      meta: {
+        rank: 2,
+        title: '弹窗'
+      }
     }
   ],
 
@@ -43,6 +63,7 @@ export default new Router({
 
 Vue.mixin({
   beforeRouteLeave: function (to, from, next) {
+    document.title=to.meta.title
     //此处判断是如果返回上一层，
     if (from && from.meta.rank && to.meta.rank && from.meta.rank > to.meta.rank) {
       if (this.$vnode && this.$vnode.data.keepAlive) {

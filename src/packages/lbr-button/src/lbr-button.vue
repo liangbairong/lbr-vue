@@ -1,5 +1,5 @@
 <template>
-    <button class="button" @click="click"><slot/></button>
+    <button :class="{'button':true,'min-button':min}" @click="click"><slot/></button>
 </template>
 <script>
     export default {
@@ -13,6 +13,10 @@
             title: {
                 type: String,
                 default: "按钮"
+            },
+            min: {
+                type: Boolean,
+                default: false
             },
         },
         methods:{
@@ -34,6 +38,13 @@
   padding: 20px 50px 20px 50px;
   border: solid #18ab29 1PX;
   text-decoration: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.min-button{
+  display: inline-block;
+  width: auto;
 }
 
 .button:hover {

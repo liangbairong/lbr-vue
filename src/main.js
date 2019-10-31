@@ -8,7 +8,6 @@ Vue.config.productionTip = false
 
 // 导入组件库
 import lbr from '@/packages/index'
-// import lbr from '@/lib/lbr-vue-ui.umd.min.js'
 // 注册组件库
 Vue.use(lbr)
 new Vue({
