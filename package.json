@@ -1,8 +1,8 @@
 {
   "name": "lbr-vue-ui",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "基于 Vue ui 功能组件",
-  "main": "lib/lbr-vue-ui.common.js",
+  "main": "lib/lbr-vue-ui.umd.min.js",
   "author": "feel",
   "keyword": "lbr-vue-ui",
   "private": false,
@@ -14,12 +14,12 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "vonic": "^2.0.0-beta.10",
-    "vue": "^2.6.6",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vue": "^2.6.6"
   },
   "devDependencies": {
+    "vuex": "^3.0.1",
+    "vue-router": "^3.0.1",
+    "vonic": "^2.0.0-beta.10",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-service": "^3.4.0",

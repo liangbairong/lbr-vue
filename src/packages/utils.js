@@ -16,7 +16,8 @@ const timeout = (duration = 0) => {
   })
 }
 
-module.exports = {
+export { createElement, removeElement, timeout }
+export default {
   createElement: createElement,
   removeElement: removeElement,
   timeout: timeout

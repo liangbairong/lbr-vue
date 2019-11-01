@@ -1,13 +1,12 @@
 <template>
   <transition name="fade">
     <div class="message" :class="type" v-show="show">
-      <i class="icon"></i>
-      <span class="text">{{text}}</span>
+      {{text}}
     </div>
   </transition>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
 export default {
   name: "lbr-message",
   props: {
@@ -15,7 +14,6 @@ export default {
       type: String,
       default: "info",
       validator: val => ["info", "success", "warning", "error"].includes(val)
-      //['info', 'success', 'warning', 'error'] 表示type只接收这四个字符串作为参数传入message组件
     },
     text: {
       type: String,
@@ -30,14 +28,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
+
 .message {
   position: fixed;
   top: 50%;
@@ -53,15 +44,5 @@ export default {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
-  &.info {
-   
-  }
-  &.success {
-
-  }
-  &.error {
-  }
-  &.warning {
-  }
 }
 </style>
