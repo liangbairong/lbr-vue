@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>使用说明 | lbr-vue-ui文档</title>
+    <meta name="description" content="Adroi">
+    
+    
+    <link rel="preload" href="./assets/css/0.styles.b6db96b5.css" as="style"><link rel="preload" href="./assets/js/app.7c747247.js" as="script"><link rel="preload" href="./assets/js/2.30736354.js" as="script"><link rel="preload" href="./assets/js/10.8e05ad27.js" as="script"><link rel="prefetch" href="./assets/js/11.7c984172.js"><link rel="prefetch" href="./assets/js/12.c1479bd1.js"><link rel="prefetch" href="./assets/js/13.6d9a21ca.js"><link rel="prefetch" href="./assets/js/3.56a9f88d.js"><link rel="prefetch" href="./assets/js/4.2e0aa3a1.js"><link rel="prefetch" href="./assets/js/5.a40b4cbe.js"><link rel="prefetch" href="./assets/js/6.a1c1796f.js"><link rel="prefetch" href="./assets/js/7.d17c403e.js"><link rel="prefetch" href="./assets/js/8.c9827d2d.js"><link rel="prefetch" href="./assets/js/9.4dca28ca.js">
+    <link rel="stylesheet" href="./assets/css/0.styles.b6db96b5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/./" class="home-link router-link-active"><!----> <span class="site-name">lbr-vue-ui文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/./apiword.html" class="nav-link">github</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/./apiword.html" class="nav-link">github</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>前言</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/./pages/directions.html" class="active sidebar-link">使用说明</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/./pages/directions.html#全局注册" class="sidebar-link">全局注册</a></li><li class="sidebar-sub-header"><a href="/./pages/directions.html#按需引用" class="sidebar-link">按需引用</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>组件</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>vue 指令</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="安装说明"><a href="#安装说明" class="header-anchor">#</a> 安装说明</h1> <div class="language- extra-class"><pre class="language-text"><code>npm i lbr-vue-ui
+cnpm i lbr-vue-ui
+</code></pre></div><h1 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h1> <h2 id="全局注册"><a href="#全局注册" class="header-anchor">#</a> 全局注册</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 导入组件库</span>
+<span class="token keyword">import</span> lbr <span class="token keyword">from</span> <span class="token string">'lbr-vue-ui'</span>
+<span class="token keyword">import</span> <span class="token string">'lbr-vue-ui/lib/lbr-vue-ui.css'</span>
+<span class="token comment">// 注册组件库</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>lbr<span class="token punctuation">)</span>
+</code></pre></div><h2 id="按需引用"><a href="#按需引用" class="header-anchor">#</a> 按需引用</h2> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>lbr-button</span><span class="token punctuation">&gt;</span></span>按钮<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>lbr-button</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 导入组件库</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> lbrButton <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'lbr-vue-ui'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  components<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    <span class="token string">'lbr-button'</span><span class="token punctuation">:</span> lbrButton
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h1 id="注意事项"><a href="#注意事项" class="header-anchor">#</a> 注意事项</h1> <p>该组件库样式基于px2rem，需在项目配置pex2rem。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/./pages/components/lbr-button.html">lbr-button</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="./assets/js/app.7c747247.js" defer></script><script src="./assets/js/2.30736354.js" defer></script><script src="./assets/js/10.8e05ad27.js" defer></script>
+  </body>
+</html>

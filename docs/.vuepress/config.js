@@ -1,5 +1,5 @@
 module.exports = {
-  base:'lbr-vue',
+  base:'./',
   title: 'lbr-vue-ui文档',  // 设置网站标题
   description : 'Adroi',
   themeConfig : {

@@ -11,9 +11,12 @@
     "build": "vue-cli-service build",
     "lib": "vue-cli-service build --target lib --name lbr-vue-ui --dest lib ./src/packages/index.js",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs && gulp"
   },
   "dependencies": {
+    "child_process": "^1.0.2",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
     "vue": "^2.6.6"
   },
   "devDependencies": {

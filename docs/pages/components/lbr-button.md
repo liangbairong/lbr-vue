@@ -9,5 +9,6 @@ title: 'lbr-button'
 <lbr-button  @click="message(1)">按钮</lbr-button>
 
 ```
-
+## Dome
+https://903529487.github.io/lbr-vue/dist/#/
 
