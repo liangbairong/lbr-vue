@@ -10,5 +10,5 @@ title: 'lbr-button'
 
 ```
 ## Dome
-https://903529487.github.io/lbr-vue/dist/#/button
+https://903529487.github.io/lbr-vue/dist/#/
 

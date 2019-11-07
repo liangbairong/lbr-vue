@@ -14,3 +14,7 @@ import lbr from 'lbr-vue-ui'
 ```
 Vue.use(lbr)
 ```
+
+### api文档
+
+https://903529487.github.io/lbr-vue/docs/
