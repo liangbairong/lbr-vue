@@ -7,6 +7,8 @@ const Button = r => require.ensure([], () => r(require('@/pages/Button')), 'modl
 const Srcoll = r => require.ensure([], () => r(require('@/pages/Srcoll')), 'modle_1')
 const Swipe = r => require.ensure([], () => r(require('@/pages/Swipe')), 'modle_1')
 const Pop = r => require.ensure([], () => r(require('@/pages/Pop')), 'modle_1')
+const Form = r => require.ensure([], () => r(require('@/pages/Form')), 'modle_1')
+
 export default new Router({
   // mode: 'history',
   // base: process.env.BASE_URL,
@@ -53,6 +55,15 @@ export default new Router({
       meta: {
         rank: 2,
         title: '弹窗'
+      }
+    },
+    {
+      path: '/form',
+      name: 'form',
+      component: Form,
+      meta: {
+        rank: 2,
+        title: '表单'
       }
     }
   ],

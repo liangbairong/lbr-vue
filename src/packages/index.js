@@ -9,6 +9,10 @@ import LbrLoading from './lbr-loading'
 import lbrDatepicker from './lbr-datepicker'
 import LbrSwipe from './lbr-swipe'
 import LbrSwipeItem from './lbr-swipe-item'
+
+import LbrForm from './lbr-form'
+import LbrFormItem from './lbr-form-item'
+import LbrInput from './lbr-input'
 // import picker from './picker'
 
 
@@ -18,7 +22,11 @@ const components = [
   LbrSrcoll,
   lbrDatepicker,
   LbrSwipe,
-  LbrSwipeItem
+  LbrSwipeItem,
+  LbrForm,
+  LbrFormItem,
+  LbrInput,
+
 ]
 
 const install = function (Vue) {
@@ -32,7 +40,9 @@ const install = function (Vue) {
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
-export { vTap, LbrMessage,  LbrLoading, LbrButton, LbrSrcoll, lbrDatepicker, LbrSwipe, LbrSwipeItem }
+export { vTap, LbrMessage,  LbrLoading, LbrButton, LbrSrcoll, lbrDatepicker, LbrSwipe, LbrSwipeItem, LbrForm,
+  LbrFormItem,
+  LbrInput }
 export default {
   // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
   install,
@@ -43,5 +53,9 @@ export default {
   LbrMessage,
   LbrSwipe,
   LbrSwipeItem,
-  LbrLoading
+  LbrLoading,
+
+  LbrForm,
+  LbrFormItem,
+  LbrInput
 }

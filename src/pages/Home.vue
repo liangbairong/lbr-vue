@@ -7,6 +7,7 @@
     </ul>
 
     <!-- <mt-picker :slots="slots" @change="onValuesChange"></mt-picker> -->
+
   </div>
 </template>
 
@@ -68,6 +69,10 @@ export default {
         {
           text: "Button",
           url: "button"
+        },
+        {
+          text: "Form",
+          url: "form"
         }
       ]
     };

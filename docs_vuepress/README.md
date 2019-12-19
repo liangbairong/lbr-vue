@@ -1,4 +1,0 @@
----
-title: 'lbr-vue-ui'
----
-
