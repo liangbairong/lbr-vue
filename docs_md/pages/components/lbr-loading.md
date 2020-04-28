@@ -3,6 +3,8 @@ title: 'lbr-loading'
 ---
 # loading加载
 
+## Dome
+<iframe src="https://903529487.github.io/lbr-vue/dist/#/pop" width="350" height="500" frameborder="no"></iframe>
 
 ### 调用方法
 ```html
@@ -39,6 +41,5 @@ export default {
 | open    | Function | 显示 |
 | close    | Function | 关闭 |
 
-### Dome
-https://903529487.github.io/lbr-vue/dist/#/pop
+
 

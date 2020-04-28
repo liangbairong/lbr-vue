@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>loading · gitbook</title>
+        <title>swipe · gitbook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="lbr-message.html" />
     
-    
-    <link rel="prev" href="lbr-button.html" />
+    <link rel="prev" href="lbr-srcoll.html" />
     
 
     </head>
@@ -129,7 +127,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="lbr-loading.html">
+        <li class="chapter " data-level="1.2.2" data-path="lbr-loading.html">
             
                 <a href="lbr-loading.html">
             
@@ -168,7 +166,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="lbr-swipe.html">
+        <li class="chapter active" data-level="1.2.5" data-path="lbr-swipe.html">
             
                 <a href="lbr-swipe.html">
             
@@ -216,7 +214,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >loading</a>
+        <a href="../.." >swipe</a>
     </h1>
 </div>
 
@@ -231,32 +229,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="loading&#x52A0;&#x8F7D;">loading&#x52A0;&#x8F7D;</h1>
+                                <h1 id="&#x8F6E;&#x64AD;&#x56FE;">&#x8F6E;&#x64AD;&#x56FE;</h1>
 <h2 id="dome">Dome</h2>
-<iframe src="https://903529487.github.io/lbr-vue/dist/#/pop" width="350" height="500" frameborder="no"></iframe>
+<iframe src="https://903529487.github.io/lbr-vue/dist/#/swipe" width="350" height="500" frameborder="no"></iframe>
 
-<h3 id="&#x8C03;&#x7528;&#x65B9;&#x6CD5;">&#x8C03;&#x7528;&#x65B9;&#x6CD5;</h3>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">lbr-button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;loading&quot;</span>&gt;</span>loading<span class="hljs-tag">&lt;/<span class="hljs-name">lbr-button</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<h2 id="&#x8C03;&#x7528;&#x65B9;&#x6CD5;">&#x8C03;&#x7528;&#x65B9;&#x6CD5;</h2>
+<pre><code class="lang-html">    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x81EA;&#x52A8;&#x64AD;&#x653E;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">lbr-swipe</span> <span class="hljs-attr">:auto</span>=<span class="hljs-string">&quot;4000&quot;</span> @<span class="hljs-attr">change</span>=<span class="hljs-string">&quot;handleChange&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;height:200px&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">lbr-swipe-item</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">lbr-swipe-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">lbr-swipe-item</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">lbr-swipe-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">lbr-swipe-item</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">lbr-swipe-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">lbr-swipe</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>&#x5173;&#x95ED;&#x81EA;&#x52A8;&#x64AD;&#x653E;<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">lbr-swipe</span> <span class="hljs-attr">:auto</span>=<span class="hljs-string">&quot;0&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">lbr-swipe-item</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">lbr-swipe-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">lbr-swipe-item</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">lbr-swipe-item</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">lbr-swipe-item</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">lbr-swipe-item</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">lbr-swipe</span>&gt;</span>
 </code></pre>
-<pre><code class="lang-js">impoxt {LbrLoading} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;lbr-vue-ui&apos;</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
-  name: <span class="hljs-string">&quot;pop&quot;</span>,
-  data() {
-    <span class="hljs-keyword">return</span> {};
-  },
-  methods: {
-    loading() {
-      LbrLoading.open({title:<span class="hljs-string">&apos;loading&apos;</span>});
-      setTimeout(() =&gt; {
-        LbrLoading.close();
-      }, <span class="hljs-number">1000</span>);
-    },
-  }
-};
-</code></pre>
-<h3 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h3>
+<h2 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h2>
 <table>
 <thead>
 <tr>
@@ -268,32 +259,46 @@
 </thead>
 <tbody>
 <tr>
-<td>title</td>
-<td>string</td>
-<td>&#x52A0;&#x8F7D;&#x4E2D;</td>
-<td>&#x63D0;&#x793A;&#x6587;&#x5B57;</td>
-</tr>
-</tbody>
-</table>
-<h3 id="&#x65B9;&#x6CD5;">&#x65B9;&#x6CD5;</h3>
-<table>
-<thead>
-<tr>
-<th>&#x65B9;&#x6CD5;&#x540D;</th>
-<th>&#x7C7B;&#x578B;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>open</td>
-<td>Function</td>
-<td>&#x663E;&#x793A;</td>
+<td>auto</td>
+<td>number</td>
+<td>4000</td>
+<td>&#x81EA;&#x52A8;&#x5207;&#x6362;&#x65F6;&#x95F4;&#xFF0C;&#x4E3A;0&#x7981;&#x6B62;&#x81EA;&#x52A8;&#x5207;&#x6362;</td>
 </tr>
 <tr>
-<td>close</td>
-<td>Function</td>
-<td>&#x5173;&#x95ED;</td>
+<td>speed</td>
+<td>number</td>
+<td>3000ms</td>
+<td>&#x52A8;&#x753B;&#x6301;&#x65F6;&#xFF08;&#x6BEB;&#x79D2;&#xFF09;</td>
+</tr>
+<tr>
+<td>defaultIndex</td>
+<td>number</td>
+<td>0</td>
+<td>&#x521D;&#x59CB;&#x663E;&#x793A;&#x7684;&#x8F6E;&#x64AD;&#x56FE;&#x7684;&#x7D22;&#x5F15;</td>
+</tr>
+<tr>
+<td>continuous</td>
+<td>Boolean</td>
+<td>true</td>
+<td>&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x5FAA;&#x73AF;&#x64AD;&#x653E;</td>
+</tr>
+<tr>
+<td>showIndicators</td>
+<td>Boolean</td>
+<td>true</td>
+<td>&#x662F;&#x5426;&#x663E;&#x793A; indicators</td>
+</tr>
+<tr>
+<td>prevent</td>
+<td>Boolean</td>
+<td>false</td>
+<td>&#x662F;&#x5426;&#x5728; touchstart &#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x65F6;&#x963B;&#x6B62;&#x4E8B;&#x4EF6;&#x7684;&#x9ED8;&#x8BA4;&#x884C;&#x4E3A;&#x3002;&#x8BBE;&#x4E3A; true &#x53EF;&#x63D0;&#x9AD8;&#x8FD0;&#x884C;&#x5728;&#x4F4E;&#x7248;&#x672C;&#x5B89;&#x5353;&#x6D4F;&#x89C8;&#x5668;&#x65F6;&#x7684;&#x6027;&#x80FD;</td>
+</tr>
+<tr>
+<td>stopPropagation</td>
+<td>Boolean</td>
+<td>false</td>
+<td>&#x662F;&#x5426;&#x5728; touchstart &#x4E8B;&#x4EF6;&#x89E6;&#x53D1;&#x65F6;&#x963B;&#x6B62;&#x5192;&#x6CE1;&#x3002;</td>
 </tr>
 </tbody>
 </table>
@@ -324,14 +329,10 @@
 
             
                 
-                <a href="lbr-button.html" class="navigation navigation-prev " aria-label="Previous page: button">
+                <a href="lbr-srcoll.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: srcoll">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="lbr-message.html" class="navigation navigation-next " aria-label="Next page: message">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -340,7 +341,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"loading","level":"1.2.2","depth":2,"next":{"title":"message","level":"1.2.3","depth":2,"path":"pages/components/lbr-message.md","ref":"pages/components/lbr-message.md","articles":[]},"previous":{"title":"button","level":"1.2.1","depth":2,"path":"pages/components/lbr-button.md","ref":"pages/components/lbr-button.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"gitbook","gitbook":"*","sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"file":{"path":"pages/components/lbr-loading.md","mtime":"2020-04-28T08:55:59.413Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-28T08:48:41.317Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"swipe","level":"1.2.5","depth":2,"previous":{"title":"srcoll","level":"1.2.4","depth":2,"path":"pages/components/lbr-srcoll.md","ref":"pages/components/lbr-srcoll.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"gitbook","gitbook":"*","sidebar":{"我的网站":"https://snowdreams1006.cn/"}},"file":{"path":"pages/components/lbr-swipe.md","mtime":"2020-04-28T09:01:13.478Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-28T08:48:41.317Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
