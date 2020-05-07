@@ -1,55 +1,76 @@
 <template>
-    <button :class="{'button':true,'min-button':min}" @click="click"><slot/></button>
+  <button
+    :disabled="disabled"
+    :class="{'lbr-button':true,'lbr-max-button':max}"
+    :style="`border-radius: ${radius}px;`"
+    @click="click"
+  >
+    <slot />
+  </button>
 </template>
 <script>
-    export default {
-        name: 'lbr-button',
-        data() {
-            return {
-
-            }
-        },
-        props: {
-            title: {
-                type: String,
-                default: "按钮"
-            },
-            min: {
-                type: Boolean,
-                default: false
-            },
-        },
-        methods:{
-          click(){
-            this.$emit('click')
-          }
-        }
+export default {
+  name: "lbr-button",
+  data() {
+    return {
+      color: "red"
+    };
+  },
+  props: {
+    title: {
+      type: String,
+      default: "按钮"
+    },
+    max: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    radius: {
+      type: Number,
+      default: 0
     }
+  },
+  methods: {
+    click() {
+      this.$emit("click");
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>
-.button {
+.lbr-button {
   border-radius: 50px;
-  text-shadow: 0px 1PX 0px #2f6627;
+  text-shadow: 0px 1px 0px #2f6627;
   font-family: Arial;
   color: #ffffff;
-  font-size:34px;
+  font-size: 34px;
   background: #44c767;
   padding: 20px 50px 20px 50px;
-  border: solid #18ab29 1PX;
+  border: solid #18ab29 1px;
   text-decoration: none;
-  display: block;
-  width: 100%;
+
   box-sizing: border-box;
-}
-.min-button{
   display: inline-block;
   width: auto;
 }
+.lbr-max-button {
+  display: block;
+  width: 100%;
+}
 
-.button:hover {
-  color: #ffffff;
+.lbr-button:hover {
   background: #5cbf2a;
-  text-decoration: none;
+}
+.lbr-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.lbr-button:disabled:hover{
+   background: #44c767;
 }
 </style>

@@ -1,40 +1,46 @@
 <template>
-  <div class="app2">
-    <lbr-form :model="model" :rules="rules" ref="loginForm">
-      <lbr-form-item lable="用户名" prop="username">
-        <lbr-input v-model="model.username"></lbr-input>
-      </lbr-form-item>
-      <lbr-form-item lable="用户密码" prop="password">
-        <lbr-input type="password" v-model="model.password"></lbr-input>
-      </lbr-form-item>
-      <lbr-form-item>
-        <lbr-button type="primary" @click="submitForm('loginForm')">提交</lbr-button>
-      </lbr-form-item>
-    </lbr-form>
+  <div class="home">
+    <h3>Form (校验表单)</h3>
+    <iForm ref="form" :model="formData" :rules="rules">
+      <iFormItem label="名称：" prop="name">
+        <iInput v-model="formData.name"></iInput>
+      </iFormItem>
+      <iFormItem label="邮箱：" prop="mail">
+        <iInput v-model="formData.mail"></iInput>
+      </iFormItem>
+      <lbr-button  @click="handleSubmit">提交</lbr-button>
+      <lbr-button  @click="handleReset">重置</lbr-button>
+    </iForm>
   </div>
 </template>
+
 <script>
+import iForm from '@/components/form/form.vue'
+import iFormItem from '@/components/form/formItem.vue'
+import iInput from '@/components/input.vue'
 export default {
+  name: 'home',
+  components: { iForm, iFormItem, iInput },
   data() {
     return {
-      name: "",
-      model: { username: "", password: "" },
+      formData: { name: '', mail: '' },
       rules: {
-        username: [{ required: true, message: "请输入用户名" }],
-        password: [{ required: true, message: "请输入密码" }]
+        name: [{ required: true, message: '不能为空', trigger: 'blur'}],
+        mail: [
+          { required: true, message: '不能为空', trigger: 'blur'},
+          { type: 'email', message: '邮箱格式不正确', trigger: 'blur'}
+        ]
       }
-    };
+    }
   },
   methods: {
-    submitForm(formName) {
-      this.$refs[formName].validate(valid => {
-        // if (valid) {
-        //   alert("校验成功");
-        // } else {
-        //   alert("校验失败");
-        // }
-      });
-    }
+    handleSubmit() {
+      this.$refs.form.validate((valid) => {
+        if (valid)  console.log('提交成功');
+        else console.log('校验失败');
+      })
+    },
+    handleReset() { this.$refs.form.resetFields() }
   }
-};
+}
 </script>
