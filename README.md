@@ -1,5 +1,6 @@
-# lbr-vue-ui
+# lbr-vue-ui 移动端组件库
 
+该样式基于postcss-px2rem npm库换算
 ## 载入
 ```
 npm install lbr-vue-ui
