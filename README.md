@@ -14,6 +14,8 @@ import lbr from 'lbr-vue-ui'
 ```
 Vue.use(lbr)
 ```
+### dome 
+https://903529487.github.io/lbr-vue/dist/#/
 
 ### api文档
 
